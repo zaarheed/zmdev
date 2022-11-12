@@ -12,10 +12,10 @@ export default function Hero() {
 	}
 
 	return (
-		<section className="w-full bg-gradient-to-b from-azure-100 pt-32 pb-20">
+		<section className="w-full bg-gradient-to-b text-zinc-700 dark:text-zinc-200 from-azure-100 dark:from-zinc-900 dark:to-zinc-900 pt-32 pb-20">
 			<div className="w-full max-w-4xl mx-auto flex flex-col sm:flex-row px-4">
 				<div className="w-full items-start lg:w-7/12 flex flex-col justify-center">
-					<h1 className="font-extrabold text-3xl md:text-5xl tracking-tight mb-1 text-gray-900">
+					<h1 className="font-extrabold text-3xl md:text-5xl tracking-tight mb-1 text-zinc-900 dark:text-zinc-100">
                         Hi, I&apos;m{" "}
 						<span id="word" className="word active cursor-pointer hover:text-gray-700" onClick={handleClick}>
 							<span className="inline-block">Z</span>
@@ -27,11 +27,11 @@ export default function Hero() {
 							<span className="inline-block">👋</span>
 						</span>
 					</h1>
-					<h2 className="text-gray-700 mb-4">
-						<span className="font-semibold">Perpetual hustler</span>,
+					<h2 className="text-zinc-700 dark:text-zinc-200 mb-4">
+						<span className="font-semibold font-plex">Perpetual hustler</span>,
                         not a real entrepreneur
 					</h2>
-					<p className="text-gray-600">
+					<p className="text-zinc-600 dark:text-zinc-300 font-plex">
                         I build delightful digital experiences on the web to make the world a better place.
 					</p>
 					<div className="w-full flex flex-row justify-start py-3">

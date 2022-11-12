@@ -16,7 +16,7 @@ export default function Header() {
 	return (
 		<nav
 			className={classNames(
-				"w-full fixed z-20 bg-azure-400 transition-top duration-300 pb-3 pt-2",
+				"w-full fixed z-20 bg-azure-400 dark:bg-zinc-900 transition-top duration-300 pb-3 pt-2",
 				visible ? "top-0" : "-top-32",
 				scrollPosition > 20 ? null : "bg-opacity-0"
 			)}

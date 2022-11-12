@@ -4,11 +4,11 @@ import TECHNOLOGIES_DICTIONARY from "@/constants/technologies";
 export default function ProjectCard({ project }) {
 	const { title, iconUrl, subtitle, link, technologies = [], githubLink } = project;
 	return (
-		<div className="w-full py-10 h-full">
+		<div className="w-full py-10 h-full font-plex">
 			<div
 				className={`
-					relative group bg-white border border-1 border-gray-300 rounded-2xl
-					flex flex-col pt-14 cursor-pointer hover:shadow w-full h-full justify-between
+					relative group bg-white dark:bg-zinc-900 border border-1 border-gray-300 dark:border-zinc-700 rounded-2xl
+					flex flex-col pt-14 cursor-pointer hover:shadow w-full h-full justify-between dark:text-zinc-200
 				`}
 			>
 				<div className="absolute overflow-hidden h-20 w-20 -top-8 left-5">
@@ -19,14 +19,14 @@ export default function ProjectCard({ project }) {
 					/>
 				</div>
 				<div className="px-5 flex flex-col pb-4">
-					<p className="text-xl font-semibold">
+					<p className="text-xl font-semibold dark:text-zinc-100">
 						{title}
 					</p>
-					<p className="text-gray-700">
+					<p className="text-zinc-700 dark:text-zinc-200">
 						{subtitle}
 					</p>
 				</div>
-				<div className="border-t border-gray-300 px-5 py-3 flex flex-row items-center">
+				<div className="border-t border-zinc-300 dark:border-zinc-700 px-5 py-3 flex flex-row items-center">
 					{link && (
 						<a
 							className=""

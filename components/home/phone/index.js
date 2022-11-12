@@ -11,7 +11,7 @@ export default function Phone() {
 					loop={true}
 					playsInline={true}
 					disablePictureInPicture={true}
-					className="w-full h-full bg-gray-700"
+					className="w-full h-full bg-zinc-700 dark:bg-zinc-200"
 				>
 					<source src="/assets/zahid.mp4" type="video/mp4" />
 				</video>

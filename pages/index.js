@@ -1,6 +1,5 @@
 import Contact from "@/components/home/contact";
 import Hero from "@/components/home/hero";
-import Projects from "@/components/home/projects";
 import Footer from "@/components/shared/footer";
 import Header from "@/components/shared/header";
 import { postFilePaths, PROJECTS_PATH } from "utils/mdx-remote";
