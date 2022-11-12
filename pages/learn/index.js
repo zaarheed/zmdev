@@ -10,11 +10,14 @@ import Prose from "@/components/learn/prose";
 import SignupButton from "@/components/learn/buttons/signup-button";
 import DefaultButton from "@/components/learn/buttons/default-button";
 import { SUBSCRIPTION_LINK, TWITTER_TESTIMONIALS_LINK } from "@/constants/config";
-import { Fragment } from "react";
+import { Fragment, useState } from "react";
 import SubscribeButton from "@/components/learn/buttons/subscribe-button";
 import CourseGrid from "@/components/learn/course-grid";
 import Tweet from "@/components/shared/tweet";
 import Head from "next/head";
+import Modal from "@/components/shared/modal";
+import InstagramDM from "@/components/shared/instagram-dm";
+import LandAJobModal from "@/components/learn/land-a-job-modal";
 
 const links = {
     neo: {
@@ -32,10 +35,16 @@ const links = {
     moveyourbodyksa: {
         href: "https://saudigazette.com.sa/article/594475/SAUDI-ARABIA/Women-participation-in-sports-rose-by-149-from-2015-Prince-Abdulaziz",
         target: "_blank",
+    },
+    womentechmakers: {
+        href: "https://developers.google.com/womentechmakers",
+        target: "_blank",
     }
 }
 
 export default function Learn({ milestones = [] }) {
+    const [showJobModal, setJobModal] = useState(false);
+
 	return (
 		<div className="w-full flex flex-col bg-white dark:bg-zinc-900">
             <Head>
@@ -321,12 +330,15 @@ export default function Learn({ milestones = [] }) {
                         </div>
 
                         <p>
-                            I've helped design, lead and mentor Google's Women Techmakers London programme in 2019. I mentored
+                            I've helped design, lead and mentor <a {...links.womentechmakers}>Google's Women Techmakers London</a> programme in 2019. I mentored
                             over 230 women to learn JavaScript during a nine week bootcamp, encouraged them to upgrade their
-                            careers and land a junior role in tech. Sadly, the COVID-19 lockdown brought my involvememt to and end
+                            careers and <a onClick={() => setJobModal(true)}>land a junior role</a> in tech. Sadly, the COVID-19 lockdown brought my involvememt to and end
                             but I'd like to continue helping under-represented groups take their seat at the table in tech.
                         </p>
                     </Prose>
+                    <Modal show={showJobModal} onClose={() => setJobModal(false)} size="sm" showCloseButton={true}>
+                        <LandAJobModal />
+                    </Modal>
                     <div className="w-full flex flex-row justify-end mt-4 space-x-4">
                         <DefaultButton
                             href={TWITTER_TESTIMONIALS_LINK}
