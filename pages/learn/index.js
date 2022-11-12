@@ -14,6 +14,7 @@ import { Fragment } from "react";
 import SubscribeButton from "@/components/learn/buttons/subscribe-button";
 import CourseGrid from "@/components/learn/course-grid";
 import Tweet from "@/components/shared/tweet";
+import Head from "next/head";
 
 const links = {
     neo: {
@@ -37,6 +38,10 @@ const links = {
 export default function Learn({ milestones = [] }) {
 	return (
 		<div className="w-full flex flex-col bg-white dark:bg-zinc-900">
+            <Head>
+                <title>Learn with Zahid | Full-stack Web Engineer</title>
+                <meta property="og:image" content="https://www.zmdev.com/assets/og_card-learn.jpg" />
+            </Head>
 			<Hero />
 
             <section className="w-full flex flex-col justify-center text-zinc-700 my-20">
