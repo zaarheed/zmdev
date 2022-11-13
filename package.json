@@ -10,7 +10,9 @@
   },
   "dependencies": {
     "@tailwindcss/typography": "0.5.8",
+    "airtable": "0.11.5",
     "classnames": "2.3.1",
+    "formik": "2.2.9",
     "framer-motion": "5.3.1",
     "gray-matter": "4.0.3",
     "next": "12.0.7",
@@ -18,7 +20,8 @@
     "next-remote-watch": "1.0.0",
     "react": "17.0.2",
     "react-dom": "17.0.2",
-    "react-icons": "4.3.1"
+    "react-icons": "4.3.1",
+    "yup": "0.32.11"
   },
   "devDependencies": {
     "autoprefixer": "10.4.13",
