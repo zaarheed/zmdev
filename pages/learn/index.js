@@ -16,7 +16,6 @@ import CourseGrid from "@/components/learn/course-grid";
 import Tweet from "@/components/shared/tweet";
 import Head from "next/head";
 import Modal from "@/components/shared/modal";
-import InstagramDM from "@/components/shared/instagram-dm";
 import LandAJobModal from "@/components/learn/land-a-job-modal";
 
 const links = {
@@ -360,8 +359,8 @@ export default function Learn({ milestones = [] }) {
                     </Title>
                     <Prose>
                         <p>
-                            Some inspiration from your hobbies, a sprinkle of code and someone to teach you the important bits
-                            of SEO is all you need for a killer project. You're welcome to figure it out on your own — or I can guide
+                            Some inspiration from your hobbies, a sprinkle of code and someone to teach you how to tied it all together
+                            is all you need for a killer project. You're welcome to figure it out on your own — or I can guide
                             you through a tried and tested approach taught in a series of short follow-along courses you can complete from a smartphone.
                         </p>
                     </Prose>
