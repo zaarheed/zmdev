@@ -124,7 +124,7 @@ function Success({ onClose = () => {} }) {
         >
             <svg xmlns="http://www.w3.org/2000/svg" width="154px" height="154px">
                 <g fill="none" stroke="#007CFF" strokeWidth="2">
-                    <circle classNames={styles.circle} cx="77" cy="77" r="72" style={{ "stroke-dasharray": "480px, 480px", "stroke-dashoffset": "960px" }} />
+                    <circle className={styles.circle} cx="77" cy="77" r="72" style={{ "stroke-dasharray": "480px, 480px", "stroke-dashoffset": "960px" }} />
                     <circle className={styles.coloredCircle} fill="#007CFF" cx="77" cy="77" r="72" style={{ "stroke-dasharray": "480px, 480px", "stroke-dashoffset": "960px" }} />
                     <polyline className={styles.polyline} stroke="#ffffff" strokeWidth="10" points="43.5,77.8 63.7,97.9 112.2,49.4 " style={{ "stroke-dasharray" : "100px, 100px", "stroke-dashoffset": "200px" }} />
                 </g>
