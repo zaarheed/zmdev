@@ -47,8 +47,15 @@ export default function Learn({ milestones = [] }) {
 	return (
 		<div className="w-full flex flex-col bg-white dark:bg-zinc-900">
             <Head>
-                <title>Learn with Zahid | Full-stack Web Engineer</title>
+                <title>Learn with Zahid | 2 week courses</title>
+
+                <meta property="og:title" content="Learn with Zahid | Become a Full-stack Web Engineer in 2 weeks" />
+                <meta property="og:description" content="Full-stack Web Engineer" />
                 <meta property="og:image" content="https://www.zmdev.com/assets/og_card-learn.jpg" />
+                <meta property="og:url" content="https://www.zmdev.com" />
+                <meta name="twitter:card" content="summary_large_image" />
+                <meta property="og:site_name" content="Learn with Zahid" />
+                <meta name="twitter:image:alt" content="Learn to code in 2 weeks" />
             </Head>
 			<Hero />
 
