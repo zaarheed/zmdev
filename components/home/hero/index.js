@@ -32,7 +32,7 @@ export default function Hero() {
                         not a real entrepreneur
 					</h2>
 					<p className="text-zinc-600 dark:text-zinc-300 font-plex">
-                        I build delightful digital experiences on the web to make the world a better place.
+                        I build software to solve big problems and make the world a better place.
 					</p>
 					<div className="w-full flex flex-row justify-start py-3">
 						<Technologies />
