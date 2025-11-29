@@ -3,9 +3,9 @@ const { fontFamily } = require("tailwindcss/defaultTheme");
 module.exports = {
 	// darkMode: "class",
 	content: [
-		"./pages/**/*.js",
-		"./components/**/*.js",
-		"./constants/**/*.js",
+		"./pages/**/*.{js,jsx}",
+		"./components/**/*.{js,jsx}",
+		"./constants/**/*.{js,jsx}",
 		"./_projects/**/*.mdx",
 		"./_posts/**/*.mdx"
 	],
@@ -75,6 +75,26 @@ module.exports = {
 			},
 			fontFamily: {
 				plex: ["IBM Plex Sans", ...fontFamily.sans]
+			},
+			animation: {
+				'float': 'float 6s ease-in-out infinite',
+				'gradient-x': 'gradient-x 3s ease infinite',
+			},
+			keyframes: {
+				float: {
+					'0%, 100%': { transform: 'translateY(0px)' },
+					'50%': { transform: 'translateY(-20px)' },
+				},
+				'gradient-x': {
+					'0%, 100%': {
+						'background-size': '200% 200%',
+						'background-position': 'left center'
+					},
+					'50%': {
+						'background-size': '200% 200%',
+						'background-position': 'right center'
+					},
+				}
 			},
 			typography: (theme) => ({
 				DEFAULT: {
