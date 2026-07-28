@@ -7,6 +7,11 @@ module.exports = {
                 destination: 'https://calendar.app.google/XFoihecQ7yggLX2b8',
                 permanent: false,
             },
+            {
+                source: '/learn',
+                destination: 'https://www.zeroshotsgiven.com/bootcamp',
+                permanent: false,
+            },
         ]
     },
 }
