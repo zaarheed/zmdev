@@ -13,7 +13,7 @@ export default function Home({ projects = [] }) {
 	return (
 		<div className="w-full flex flex-col">
 			<Header />
-			<Hero />
+			<Hero projects={projects.map(({ frontMatter }) => frontMatter)} />
 			<ProjectsAsThumbs projects={projects} />
 			<Contact />
 			<Footer />

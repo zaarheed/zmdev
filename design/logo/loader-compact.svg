@@ -1,0 +1,12 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 108.5 425 208"
+     width="131" height="64" role="img" aria-label="Loading">
+  <g transform="rotate(-4 212.5 212.5)">
+    <rect x="154.50" y="154.50" width="116.00" height="116.00" fill="#FF2E7E"><animate attributeName="x" dur="1.75s" repeatCount="indefinite" calcMode="spline" keyTimes="0;0.06;0.34;0.44;0.56;0.78;1" keySplines="0 0 1 1;0.2 0 0.35 1;0.3 0 0.3 1;0 0 1 1;0.6 0 0.9 0.25;0 0 1 1" values="154.50;154.50;60.98;67.50;67.50;154.50;154.50"/><animate attributeName="width" dur="1.75s" repeatCount="indefinite" calcMode="spline" keyTimes="0;0.06;0.34;0.44;0.56;0.78;1" keySplines="0 0 1 1;0.2 0 0.35 1;0.3 0 0.3 1;0 0 1 1;0.6 0 0.9 0.25;0 0 1 1" values="116.00;116.00;303.05;290.00;290.00;116.00;116.00"/></rect><path d="M200.22 154.50 H270.50 V270.50 H217.82 Z" fill="#17C8FF"><animate attributeName="d" dur="1.75s" repeatCount="indefinite" calcMode="spline" keyTimes="0;0.06;0.34;0.44;0.56;0.78;1" keySplines="0 0 1 1;0.2 0 0.35 1;0.3 0 0.3 1;0 0 1 1;0.6 0 0.9 0.25;0 0 1 1" values="M200.22 154.50 H270.50 V270.50 H217.82 Z;M200.22 154.50 H270.50 V270.50 H217.82 Z;M180.42 154.50 H364.02 V270.50 H226.40 Z;M181.80 154.50 H357.50 V270.50 H225.80 Z;M181.80 154.50 H357.50 V270.50 H225.80 Z;M200.22 154.50 H270.50 V270.50 H217.82 Z;M200.22 154.50 H270.50 V270.50 H217.82 Z"/></path>
+    <g fill="#FFF4E8">
+      <path d="M98.50 128.50 L199.50 128.50 L199.50 158.50 L128.50 158.50 L128.50 266.50 L199.50 266.50 L199.50 296.50 L98.50 296.50Z" transform="translate(-0.00 0)"
+        ><animateTransform attributeName="transform" dur="1.75s" repeatCount="indefinite" calcMode="spline" keyTimes="0;0.06;0.34;0.44;0.56;0.78;1" keySplines="0 0 1 1;0.2 0 0.35 1;0.3 0 0.3 1;0 0 1 1;0.6 0 0.9 0.25;0 0 1 1" values="-0.00 0;-0.00 0;-93.52 0;-87.00 0;-87.00 0;-0.00 0;-0.00 0" type="translate"/></path>
+      <path d="M326.50 128.50 L225.50 128.50 L225.50 158.50 L296.50 158.50 L296.50 266.50 L225.50 266.50 L225.50 296.50 L326.50 296.50Z" transform="translate(0.00 0)"
+        ><animateTransform attributeName="transform" dur="1.75s" repeatCount="indefinite" calcMode="spline" keyTimes="0;0.06;0.34;0.44;0.56;0.78;1" keySplines="0 0 1 1;0.2 0 0.35 1;0.3 0 0.3 1;0 0 1 1;0.6 0 0.9 0.25;0 0 1 1" values="0.00 0;0.00 0;93.52 0;87.00 0;87.00 0;0.00 0;0.00 0" type="translate"/></path>
+    </g>
+  </g>
+</svg>

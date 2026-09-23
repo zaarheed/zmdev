@@ -22,7 +22,7 @@ export default function ContactCard() {
                         Zahid Mahmood
 					</p>
 					<p className="text-gray-700 mb-2 dark:text-zinc-200">
-                        Full-stack Web engineer
+                        Serial founder &amp; builder
 					</p>
 					<a
 						className="text-zinc-500 dark:text-zinc-300 flex flex-row space-x-2 items-center hover:text-azure-500"

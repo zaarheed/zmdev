@@ -1,0 +1,235 @@
+<!doctype html>
+<html lang="en"><head><meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Finger Frame — loader</title>
+<style>
+:root{--ink:#07090C;--line:#232b34;--dim:#7d8894}
+*{box-sizing:border-box}
+body{margin:0;background:var(--ink);color:#E8ECF0;padding:34px 30px 90px;
+ font:15px/1.55 -apple-system,BlinkMacSystemFont,"Segoe UI",Helvetica,Arial,sans-serif;
+ -webkit-font-smoothing:antialiased;transition:background .18s}
+h1{font-size:20px;margin:0 0 4px;letter-spacing:-.3px}
+h2{font:500 11px/1 ui-monospace,SFMono-Regular,Menlo,monospace;letter-spacing:.14em;
+ text-transform:uppercase;color:var(--dim);margin:40px 0 12px;padding-bottom:8px;
+ border-bottom:1px solid var(--line)}
+p.lede,p.note{color:var(--dim);margin:0 0 14px;max-width:74ch;font-size:14px}
+.row{display:flex;gap:34px;align-items:center;flex-wrap:wrap}
+figure{margin:0;text-align:center}
+figcaption{font:10px ui-monospace,monospace;color:var(--dim);margin-top:10px}
+.slot{display:flex;align-items:center;justify-content:center;min-height:44px}
+.bar{display:flex;gap:18px;align-items:center;flex-wrap:wrap;margin-top:16px;
+ padding:12px 14px;border:1px solid var(--line);border-radius:10px}
+button{font:11px ui-monospace,monospace;color:#E8ECF0;background:#1b222b;
+ border:1px solid var(--line);border-radius:7px;padding:6px 11px;cursor:pointer}
+button.on{background:#FF2E7E;border-color:#FF2E7E;color:#22060f}
+label{font:10px ui-monospace,monospace;letter-spacing:.1em;color:var(--dim);
+ text-transform:uppercase}
+.zoomrow{display:flex;gap:120px;align-items:center;margin-top:56px;margin-bottom:40px}
+body.light{color:#14181d} body.light h1{color:#14181d}
+</style></head>
+<body>
+<h1>Finger Frame &mdash; loader</h1>
+<p class="lede">Live. Everything on this page is the same animation at different sizes,
+running in sync. Rebuild with <code>python3 tools/generate.py</code>.</p>
+
+<div class="bar">
+  <label>Ground</label><div id="bg"><button data-bg="#07090C" class="on">ink</button><button data-bg="#FFF4E8" class="">cream</button><button data-bg="#545860" class="">mid</button><button data-bg="#ffffff" class="">white</button></div>
+  <label style="margin-left:14px">Speed</label>
+  <div id="sp"><button data-mul="0.35">0.35&times;</button>
+  <button data-mul="1" class="on">1&times;</button>
+  <button data-mul="2">2&times;</button></div>
+  <button id="pp" style="margin-left:14px">pause</button>
+</div>
+
+<section><h2>Turning &mdash; 44pt and up</h2><p class="note">Square, because it has to hold the open mark in either orientation.</p><div class="row"><figure><div class="slot"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 425 425"
+     width="160" height="160" role="img" aria-label="Loading">
+  <g transform="rotate(-4 212.5 212.5)"><animateTransform attributeName="transform" type="rotate" dur="7s" repeatCount="indefinite" calcMode="spline" keyTimes="0.0000;0.1950;0.2500;0.4450;0.5000;0.6950;0.7500;0.9450;1.0000" keySplines="0 0 1 1;0.5 0 0.15 1;0 0 1 1;0.5 0 0.15 1;0 0 1 1;0.5 0 0.15 1;0 0 1 1;0.5 0 0.15 1" values="-4 212.5 212.5;-4 212.5 212.5;86 212.5 212.5;86 212.5 212.5;176 212.5 212.5;176 212.5 212.5;266 212.5 212.5;266 212.5 212.5;356 212.5 212.5"/>
+    <rect x="154.50" y="154.50" width="116.00" height="116.00" fill="#FF2E7E"><animate attributeName="x" dur="1.75s" repeatCount="indefinite" calcMode="spline" keyTimes="0;0.06;0.34;0.44;0.56;0.78;1" keySplines="0 0 1 1;0.2 0 0.35 1;0.3 0 0.3 1;0 0 1 1;0.6 0 0.9 0.25;0 0 1 1" values="154.50;154.50;60.98;67.50;67.50;154.50;154.50"/><animate attributeName="width" dur="1.75s" repeatCount="indefinite" calcMode="spline" keyTimes="0;0.06;0.34;0.44;0.56;0.78;1" keySplines="0 0 1 1;0.2 0 0.35 1;0.3 0 0.3 1;0 0 1 1;0.6 0 0.9 0.25;0 0 1 1" values="116.00;116.00;303.05;290.00;290.00;116.00;116.00"/></rect><path d="M200.22 154.50 H270.50 V270.50 H217.82 Z" fill="#17C8FF"><animate attributeName="d" dur="1.75s" repeatCount="indefinite" calcMode="spline" keyTimes="0;0.06;0.34;0.44;0.56;0.78;1" keySplines="0 0 1 1;0.2 0 0.35 1;0.3 0 0.3 1;0 0 1 1;0.6 0 0.9 0.25;0 0 1 1" values="M200.22 154.50 H270.50 V270.50 H217.82 Z;M200.22 154.50 H270.50 V270.50 H217.82 Z;M180.42 154.50 H364.02 V270.50 H226.40 Z;M181.80 154.50 H357.50 V270.50 H225.80 Z;M181.80 154.50 H357.50 V270.50 H225.80 Z;M200.22 154.50 H270.50 V270.50 H217.82 Z;M200.22 154.50 H270.50 V270.50 H217.82 Z"/></path>
+    <g fill="#FFF4E8">
+      <path d="M98.50 128.50 L199.50 128.50 L199.50 158.50 L128.50 158.50 L128.50 266.50 L199.50 266.50 L199.50 296.50 L98.50 296.50Z" transform="translate(-0.00 0)"
+        ><animateTransform attributeName="transform" dur="1.75s" repeatCount="indefinite" calcMode="spline" keyTimes="0;0.06;0.34;0.44;0.56;0.78;1" keySplines="0 0 1 1;0.2 0 0.35 1;0.3 0 0.3 1;0 0 1 1;0.6 0 0.9 0.25;0 0 1 1" values="-0.00 0;-0.00 0;-93.52 0;-87.00 0;-87.00 0;-0.00 0;-0.00 0" type="translate"/></path>
+      <path d="M326.50 128.50 L225.50 128.50 L225.50 158.50 L296.50 158.50 L296.50 266.50 L225.50 266.50 L225.50 296.50 L326.50 296.50Z" transform="translate(0.00 0)"
+        ><animateTransform attributeName="transform" dur="1.75s" repeatCount="indefinite" calcMode="spline" keyTimes="0;0.06;0.34;0.44;0.56;0.78;1" keySplines="0 0 1 1;0.2 0 0.35 1;0.3 0 0.3 1;0 0 1 1;0.6 0 0.9 0.25;0 0 1 1" values="0.00 0;0.00 0;93.52 0;87.00 0;87.00 0;0.00 0;0.00 0" type="translate"/></path>
+    </g>
+  </g>
+</svg></div><figcaption>160 pt</figcaption></figure><figure><div class="slot"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 425 425"
+     width="112" height="112" role="img" aria-label="Loading">
+  <g transform="rotate(-4 212.5 212.5)"><animateTransform attributeName="transform" type="rotate" dur="7s" repeatCount="indefinite" calcMode="spline" keyTimes="0.0000;0.1950;0.2500;0.4450;0.5000;0.6950;0.7500;0.9450;1.0000" keySplines="0 0 1 1;0.5 0 0.15 1;0 0 1 1;0.5 0 0.15 1;0 0 1 1;0.5 0 0.15 1;0 0 1 1;0.5 0 0.15 1" values="-4 212.5 212.5;-4 212.5 212.5;86 212.5 212.5;86 212.5 212.5;176 212.5 212.5;176 212.5 212.5;266 212.5 212.5;266 212.5 212.5;356 212.5 212.5"/>
+    <rect x="154.50" y="154.50" width="116.00" height="116.00" fill="#FF2E7E"><animate attributeName="x" dur="1.75s" repeatCount="indefinite" calcMode="spline" keyTimes="0;0.06;0.34;0.44;0.56;0.78;1" keySplines="0 0 1 1;0.2 0 0.35 1;0.3 0 0.3 1;0 0 1 1;0.6 0 0.9 0.25;0 0 1 1" values="154.50;154.50;60.98;67.50;67.50;154.50;154.50"/><animate attributeName="width" dur="1.75s" repeatCount="indefinite" calcMode="spline" keyTimes="0;0.06;0.34;0.44;0.56;0.78;1" keySplines="0 0 1 1;0.2 0 0.35 1;0.3 0 0.3 1;0 0 1 1;0.6 0 0.9 0.25;0 0 1 1" values="116.00;116.00;303.05;290.00;290.00;116.00;116.00"/></rect><path d="M200.22 154.50 H270.50 V270.50 H217.82 Z" fill="#17C8FF"><animate attributeName="d" dur="1.75s" repeatCount="indefinite" calcMode="spline" keyTimes="0;0.06;0.34;0.44;0.56;0.78;1" keySplines="0 0 1 1;0.2 0 0.35 1;0.3 0 0.3 1;0 0 1 1;0.6 0 0.9 0.25;0 0 1 1" values="M200.22 154.50 H270.50 V270.50 H217.82 Z;M200.22 154.50 H270.50 V270.50 H217.82 Z;M180.42 154.50 H364.02 V270.50 H226.40 Z;M181.80 154.50 H357.50 V270.50 H225.80 Z;M181.80 154.50 H357.50 V270.50 H225.80 Z;M200.22 154.50 H270.50 V270.50 H217.82 Z;M200.22 154.50 H270.50 V270.50 H217.82 Z"/></path>
+    <g fill="#FFF4E8">
+      <path d="M98.50 128.50 L199.50 128.50 L199.50 158.50 L128.50 158.50 L128.50 266.50 L199.50 266.50 L199.50 296.50 L98.50 296.50Z" transform="translate(-0.00 0)"
+        ><animateTransform attributeName="transform" dur="1.75s" repeatCount="indefinite" calcMode="spline" keyTimes="0;0.06;0.34;0.44;0.56;0.78;1" keySplines="0 0 1 1;0.2 0 0.35 1;0.3 0 0.3 1;0 0 1 1;0.6 0 0.9 0.25;0 0 1 1" values="-0.00 0;-0.00 0;-93.52 0;-87.00 0;-87.00 0;-0.00 0;-0.00 0" type="translate"/></path>
+      <path d="M326.50 128.50 L225.50 128.50 L225.50 158.50 L296.50 158.50 L296.50 266.50 L225.50 266.50 L225.50 296.50 L326.50 296.50Z" transform="translate(0.00 0)"
+        ><animateTransform attributeName="transform" dur="1.75s" repeatCount="indefinite" calcMode="spline" keyTimes="0;0.06;0.34;0.44;0.56;0.78;1" keySplines="0 0 1 1;0.2 0 0.35 1;0.3 0 0.3 1;0 0 1 1;0.6 0 0.9 0.25;0 0 1 1" values="0.00 0;0.00 0;93.52 0;87.00 0;87.00 0;0.00 0;0.00 0" type="translate"/></path>
+    </g>
+  </g>
+</svg></div><figcaption>112 pt</figcaption></figure><figure><div class="slot"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 425 425"
+     width="88" height="88" role="img" aria-label="Loading">
+  <g transform="rotate(-4 212.5 212.5)"><animateTransform attributeName="transform" type="rotate" dur="7s" repeatCount="indefinite" calcMode="spline" keyTimes="0.0000;0.1950;0.2500;0.4450;0.5000;0.6950;0.7500;0.9450;1.0000" keySplines="0 0 1 1;0.5 0 0.15 1;0 0 1 1;0.5 0 0.15 1;0 0 1 1;0.5 0 0.15 1;0 0 1 1;0.5 0 0.15 1" values="-4 212.5 212.5;-4 212.5 212.5;86 212.5 212.5;86 212.5 212.5;176 212.5 212.5;176 212.5 212.5;266 212.5 212.5;266 212.5 212.5;356 212.5 212.5"/>
+    <rect x="154.50" y="154.50" width="116.00" height="116.00" fill="#FF2E7E"><animate attributeName="x" dur="1.75s" repeatCount="indefinite" calcMode="spline" keyTimes="0;0.06;0.34;0.44;0.56;0.78;1" keySplines="0 0 1 1;0.2 0 0.35 1;0.3 0 0.3 1;0 0 1 1;0.6 0 0.9 0.25;0 0 1 1" values="154.50;154.50;60.98;67.50;67.50;154.50;154.50"/><animate attributeName="width" dur="1.75s" repeatCount="indefinite" calcMode="spline" keyTimes="0;0.06;0.34;0.44;0.56;0.78;1" keySplines="0 0 1 1;0.2 0 0.35 1;0.3 0 0.3 1;0 0 1 1;0.6 0 0.9 0.25;0 0 1 1" values="116.00;116.00;303.05;290.00;290.00;116.00;116.00"/></rect><path d="M200.22 154.50 H270.50 V270.50 H217.82 Z" fill="#17C8FF"><animate attributeName="d" dur="1.75s" repeatCount="indefinite" calcMode="spline" keyTimes="0;0.06;0.34;0.44;0.56;0.78;1" keySplines="0 0 1 1;0.2 0 0.35 1;0.3 0 0.3 1;0 0 1 1;0.6 0 0.9 0.25;0 0 1 1" values="M200.22 154.50 H270.50 V270.50 H217.82 Z;M200.22 154.50 H270.50 V270.50 H217.82 Z;M180.42 154.50 H364.02 V270.50 H226.40 Z;M181.80 154.50 H357.50 V270.50 H225.80 Z;M181.80 154.50 H357.50 V270.50 H225.80 Z;M200.22 154.50 H270.50 V270.50 H217.82 Z;M200.22 154.50 H270.50 V270.50 H217.82 Z"/></path>
+    <g fill="#FFF4E8">
+      <path d="M98.50 128.50 L199.50 128.50 L199.50 158.50 L128.50 158.50 L128.50 266.50 L199.50 266.50 L199.50 296.50 L98.50 296.50Z" transform="translate(-0.00 0)"
+        ><animateTransform attributeName="transform" dur="1.75s" repeatCount="indefinite" calcMode="spline" keyTimes="0;0.06;0.34;0.44;0.56;0.78;1" keySplines="0 0 1 1;0.2 0 0.35 1;0.3 0 0.3 1;0 0 1 1;0.6 0 0.9 0.25;0 0 1 1" values="-0.00 0;-0.00 0;-93.52 0;-87.00 0;-87.00 0;-0.00 0;-0.00 0" type="translate"/></path>
+      <path d="M326.50 128.50 L225.50 128.50 L225.50 158.50 L296.50 158.50 L296.50 266.50 L225.50 266.50 L225.50 296.50 L326.50 296.50Z" transform="translate(0.00 0)"
+        ><animateTransform attributeName="transform" dur="1.75s" repeatCount="indefinite" calcMode="spline" keyTimes="0;0.06;0.34;0.44;0.56;0.78;1" keySplines="0 0 1 1;0.2 0 0.35 1;0.3 0 0.3 1;0 0 1 1;0.6 0 0.9 0.25;0 0 1 1" values="0.00 0;0.00 0;93.52 0;87.00 0;87.00 0;0.00 0;0.00 0" type="translate"/></path>
+    </g>
+  </g>
+</svg></div><figcaption>88 pt</figcaption></figure><figure><div class="slot"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 425 425"
+     width="64" height="64" role="img" aria-label="Loading">
+  <g transform="rotate(-4 212.5 212.5)"><animateTransform attributeName="transform" type="rotate" dur="7s" repeatCount="indefinite" calcMode="spline" keyTimes="0.0000;0.1950;0.2500;0.4450;0.5000;0.6950;0.7500;0.9450;1.0000" keySplines="0 0 1 1;0.5 0 0.15 1;0 0 1 1;0.5 0 0.15 1;0 0 1 1;0.5 0 0.15 1;0 0 1 1;0.5 0 0.15 1" values="-4 212.5 212.5;-4 212.5 212.5;86 212.5 212.5;86 212.5 212.5;176 212.5 212.5;176 212.5 212.5;266 212.5 212.5;266 212.5 212.5;356 212.5 212.5"/>
+    <rect x="154.50" y="154.50" width="116.00" height="116.00" fill="#FF2E7E"><animate attributeName="x" dur="1.75s" repeatCount="indefinite" calcMode="spline" keyTimes="0;0.06;0.34;0.44;0.56;0.78;1" keySplines="0 0 1 1;0.2 0 0.35 1;0.3 0 0.3 1;0 0 1 1;0.6 0 0.9 0.25;0 0 1 1" values="154.50;154.50;60.98;67.50;67.50;154.50;154.50"/><animate attributeName="width" dur="1.75s" repeatCount="indefinite" calcMode="spline" keyTimes="0;0.06;0.34;0.44;0.56;0.78;1" keySplines="0 0 1 1;0.2 0 0.35 1;0.3 0 0.3 1;0 0 1 1;0.6 0 0.9 0.25;0 0 1 1" values="116.00;116.00;303.05;290.00;290.00;116.00;116.00"/></rect><path d="M200.22 154.50 H270.50 V270.50 H217.82 Z" fill="#17C8FF"><animate attributeName="d" dur="1.75s" repeatCount="indefinite" calcMode="spline" keyTimes="0;0.06;0.34;0.44;0.56;0.78;1" keySplines="0 0 1 1;0.2 0 0.35 1;0.3 0 0.3 1;0 0 1 1;0.6 0 0.9 0.25;0 0 1 1" values="M200.22 154.50 H270.50 V270.50 H217.82 Z;M200.22 154.50 H270.50 V270.50 H217.82 Z;M180.42 154.50 H364.02 V270.50 H226.40 Z;M181.80 154.50 H357.50 V270.50 H225.80 Z;M181.80 154.50 H357.50 V270.50 H225.80 Z;M200.22 154.50 H270.50 V270.50 H217.82 Z;M200.22 154.50 H270.50 V270.50 H217.82 Z"/></path>
+    <g fill="#FFF4E8">
+      <path d="M98.50 128.50 L199.50 128.50 L199.50 158.50 L128.50 158.50 L128.50 266.50 L199.50 266.50 L199.50 296.50 L98.50 296.50Z" transform="translate(-0.00 0)"
+        ><animateTransform attributeName="transform" dur="1.75s" repeatCount="indefinite" calcMode="spline" keyTimes="0;0.06;0.34;0.44;0.56;0.78;1" keySplines="0 0 1 1;0.2 0 0.35 1;0.3 0 0.3 1;0 0 1 1;0.6 0 0.9 0.25;0 0 1 1" values="-0.00 0;-0.00 0;-93.52 0;-87.00 0;-87.00 0;-0.00 0;-0.00 0" type="translate"/></path>
+      <path d="M326.50 128.50 L225.50 128.50 L225.50 158.50 L296.50 158.50 L296.50 266.50 L225.50 266.50 L225.50 296.50 L326.50 296.50Z" transform="translate(0.00 0)"
+        ><animateTransform attributeName="transform" dur="1.75s" repeatCount="indefinite" calcMode="spline" keyTimes="0;0.06;0.34;0.44;0.56;0.78;1" keySplines="0 0 1 1;0.2 0 0.35 1;0.3 0 0.3 1;0 0 1 1;0.6 0 0.9 0.25;0 0 1 1" values="0.00 0;0.00 0;93.52 0;87.00 0;87.00 0;0.00 0;0.00 0" type="translate"/></path>
+    </g>
+  </g>
+</svg></div><figcaption>64 pt</figcaption></figure><figure><div class="slot"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 425 425"
+     width="44" height="44" role="img" aria-label="Loading">
+  <g transform="rotate(-4 212.5 212.5)"><animateTransform attributeName="transform" type="rotate" dur="7s" repeatCount="indefinite" calcMode="spline" keyTimes="0.0000;0.1950;0.2500;0.4450;0.5000;0.6950;0.7500;0.9450;1.0000" keySplines="0 0 1 1;0.5 0 0.15 1;0 0 1 1;0.5 0 0.15 1;0 0 1 1;0.5 0 0.15 1;0 0 1 1;0.5 0 0.15 1" values="-4 212.5 212.5;-4 212.5 212.5;86 212.5 212.5;86 212.5 212.5;176 212.5 212.5;176 212.5 212.5;266 212.5 212.5;266 212.5 212.5;356 212.5 212.5"/>
+    <rect x="154.50" y="154.50" width="116.00" height="116.00" fill="#FF2E7E"><animate attributeName="x" dur="1.75s" repeatCount="indefinite" calcMode="spline" keyTimes="0;0.06;0.34;0.44;0.56;0.78;1" keySplines="0 0 1 1;0.2 0 0.35 1;0.3 0 0.3 1;0 0 1 1;0.6 0 0.9 0.25;0 0 1 1" values="154.50;154.50;60.98;67.50;67.50;154.50;154.50"/><animate attributeName="width" dur="1.75s" repeatCount="indefinite" calcMode="spline" keyTimes="0;0.06;0.34;0.44;0.56;0.78;1" keySplines="0 0 1 1;0.2 0 0.35 1;0.3 0 0.3 1;0 0 1 1;0.6 0 0.9 0.25;0 0 1 1" values="116.00;116.00;303.05;290.00;290.00;116.00;116.00"/></rect><path d="M200.22 154.50 H270.50 V270.50 H217.82 Z" fill="#17C8FF"><animate attributeName="d" dur="1.75s" repeatCount="indefinite" calcMode="spline" keyTimes="0;0.06;0.34;0.44;0.56;0.78;1" keySplines="0 0 1 1;0.2 0 0.35 1;0.3 0 0.3 1;0 0 1 1;0.6 0 0.9 0.25;0 0 1 1" values="M200.22 154.50 H270.50 V270.50 H217.82 Z;M200.22 154.50 H270.50 V270.50 H217.82 Z;M180.42 154.50 H364.02 V270.50 H226.40 Z;M181.80 154.50 H357.50 V270.50 H225.80 Z;M181.80 154.50 H357.50 V270.50 H225.80 Z;M200.22 154.50 H270.50 V270.50 H217.82 Z;M200.22 154.50 H270.50 V270.50 H217.82 Z"/></path>
+    <g fill="#FFF4E8">
+      <path d="M98.50 128.50 L199.50 128.50 L199.50 158.50 L128.50 158.50 L128.50 266.50 L199.50 266.50 L199.50 296.50 L98.50 296.50Z" transform="translate(-0.00 0)"
+        ><animateTransform attributeName="transform" dur="1.75s" repeatCount="indefinite" calcMode="spline" keyTimes="0;0.06;0.34;0.44;0.56;0.78;1" keySplines="0 0 1 1;0.2 0 0.35 1;0.3 0 0.3 1;0 0 1 1;0.6 0 0.9 0.25;0 0 1 1" values="-0.00 0;-0.00 0;-93.52 0;-87.00 0;-87.00 0;-0.00 0;-0.00 0" type="translate"/></path>
+      <path d="M326.50 128.50 L225.50 128.50 L225.50 158.50 L296.50 158.50 L296.50 266.50 L225.50 266.50 L225.50 296.50 L326.50 296.50Z" transform="translate(0.00 0)"
+        ><animateTransform attributeName="transform" dur="1.75s" repeatCount="indefinite" calcMode="spline" keyTimes="0;0.06;0.34;0.44;0.56;0.78;1" keySplines="0 0 1 1;0.2 0 0.35 1;0.3 0 0.3 1;0 0 1 1;0.6 0 0.9 0.25;0 0 1 1" values="0.00 0;0.00 0;93.52 0;87.00 0;87.00 0;0.00 0;0.00 0" type="translate"/></path>
+    </g>
+  </g>
+</svg></div><figcaption>44 pt</figcaption></figure></div></section>
+<section><h2>Compact &mdash; buttons and rows</h2><p class="note">Drops the turn, so it needs only the mark's own 2:1 bounds and is drawn about twice as large in the same height.</p><div class="row"><figure><div class="slot"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 108.5 425 208"
+     width="90" height="44" role="img" aria-label="Loading">
+  <g transform="rotate(-4 212.5 212.5)">
+    <rect x="154.50" y="154.50" width="116.00" height="116.00" fill="#FF2E7E"><animate attributeName="x" dur="1.75s" repeatCount="indefinite" calcMode="spline" keyTimes="0;0.06;0.34;0.44;0.56;0.78;1" keySplines="0 0 1 1;0.2 0 0.35 1;0.3 0 0.3 1;0 0 1 1;0.6 0 0.9 0.25;0 0 1 1" values="154.50;154.50;60.98;67.50;67.50;154.50;154.50"/><animate attributeName="width" dur="1.75s" repeatCount="indefinite" calcMode="spline" keyTimes="0;0.06;0.34;0.44;0.56;0.78;1" keySplines="0 0 1 1;0.2 0 0.35 1;0.3 0 0.3 1;0 0 1 1;0.6 0 0.9 0.25;0 0 1 1" values="116.00;116.00;303.05;290.00;290.00;116.00;116.00"/></rect><path d="M200.22 154.50 H270.50 V270.50 H217.82 Z" fill="#17C8FF"><animate attributeName="d" dur="1.75s" repeatCount="indefinite" calcMode="spline" keyTimes="0;0.06;0.34;0.44;0.56;0.78;1" keySplines="0 0 1 1;0.2 0 0.35 1;0.3 0 0.3 1;0 0 1 1;0.6 0 0.9 0.25;0 0 1 1" values="M200.22 154.50 H270.50 V270.50 H217.82 Z;M200.22 154.50 H270.50 V270.50 H217.82 Z;M180.42 154.50 H364.02 V270.50 H226.40 Z;M181.80 154.50 H357.50 V270.50 H225.80 Z;M181.80 154.50 H357.50 V270.50 H225.80 Z;M200.22 154.50 H270.50 V270.50 H217.82 Z;M200.22 154.50 H270.50 V270.50 H217.82 Z"/></path>
+    <g fill="#FFF4E8">
+      <path d="M98.50 128.50 L199.50 128.50 L199.50 158.50 L128.50 158.50 L128.50 266.50 L199.50 266.50 L199.50 296.50 L98.50 296.50Z" transform="translate(-0.00 0)"
+        ><animateTransform attributeName="transform" dur="1.75s" repeatCount="indefinite" calcMode="spline" keyTimes="0;0.06;0.34;0.44;0.56;0.78;1" keySplines="0 0 1 1;0.2 0 0.35 1;0.3 0 0.3 1;0 0 1 1;0.6 0 0.9 0.25;0 0 1 1" values="-0.00 0;-0.00 0;-93.52 0;-87.00 0;-87.00 0;-0.00 0;-0.00 0" type="translate"/></path>
+      <path d="M326.50 128.50 L225.50 128.50 L225.50 158.50 L296.50 158.50 L296.50 266.50 L225.50 266.50 L225.50 296.50 L326.50 296.50Z" transform="translate(0.00 0)"
+        ><animateTransform attributeName="transform" dur="1.75s" repeatCount="indefinite" calcMode="spline" keyTimes="0;0.06;0.34;0.44;0.56;0.78;1" keySplines="0 0 1 1;0.2 0 0.35 1;0.3 0 0.3 1;0 0 1 1;0.6 0 0.9 0.25;0 0 1 1" values="0.00 0;0.00 0;93.52 0;87.00 0;87.00 0;0.00 0;0.00 0" type="translate"/></path>
+    </g>
+  </g>
+</svg></div><figcaption>44 pt</figcaption></figure><figure><div class="slot"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 84 445 277"
+     width="58" height="36" role="img" aria-label="Loading">
+  <g transform="rotate(-4 222.5 222.5)">
+    <rect x="171.00" y="147.50" width="103.00" height="150.00" fill="#FF2E7E"><animate attributeName="x" dur="1.75s" repeatCount="indefinite" calcMode="spline" keyTimes="0;0.06;0.34;0.44;0.56;0.78;1" keySplines="0 0 1 1;0.2 0 0.35 1;0.3 0 0.3 1;0 0 1 1;0.6 0 0.9 0.25;0 0 1 1" values="171.00;171.00;97.10;102.50;102.50;171.00;171.00"/><animate attributeName="width" dur="1.75s" repeatCount="indefinite" calcMode="spline" keyTimes="0;0.06;0.34;0.44;0.56;0.78;1" keySplines="0 0 1 1;0.2 0 0.35 1;0.3 0 0.3 1;0 0 1 1;0.6 0 0.9 0.25;0 0 1 1" values="103.00;103.00;250.80;240.00;240.00;103.00;103.00"/></rect><path d="M211.60 147.50 H274.00 V297.50 H227.22 Z" fill="#17C8FF"><animate attributeName="d" dur="1.75s" repeatCount="indefinite" calcMode="spline" keyTimes="0;0.06;0.34;0.44;0.56;0.78;1" keySplines="0 0 1 1;0.2 0 0.35 1;0.3 0 0.3 1;0 0 1 1;0.6 0 0.9 0.25;0 0 1 1" values="M211.60 147.50 H274.00 V297.50 H227.22 Z;M211.60 147.50 H274.00 V297.50 H227.22 Z;M195.95 147.50 H347.90 V297.50 H234.00 Z;M197.09 147.50 H342.50 V297.50 H233.51 Z;M197.09 147.50 H342.50 V297.50 H233.51 Z;M211.60 147.50 H274.00 V297.50 H227.22 Z;M211.60 147.50 H274.00 V297.50 H227.22 Z"/></path>
+    <g fill="#FFF4E8">
+      <path d="M82.00 104.50 L201.00 104.50 L201.00 150.50 L128.00 150.50 L128.00 294.50 L201.00 294.50 L201.00 340.50 L82.00 340.50Z" transform="translate(-0.00 0)"
+        ><animateTransform attributeName="transform" dur="1.75s" repeatCount="indefinite" calcMode="spline" keyTimes="0;0.06;0.34;0.44;0.56;0.78;1" keySplines="0 0 1 1;0.2 0 0.35 1;0.3 0 0.3 1;0 0 1 1;0.6 0 0.9 0.25;0 0 1 1" values="-0.00 0;-0.00 0;-73.90 0;-68.50 0;-68.50 0;-0.00 0;-0.00 0" type="translate"/></path>
+      <path d="M363.00 104.50 L244.00 104.50 L244.00 150.50 L317.00 150.50 L317.00 294.50 L244.00 294.50 L244.00 340.50 L363.00 340.50Z" transform="translate(0.00 0)"
+        ><animateTransform attributeName="transform" dur="1.75s" repeatCount="indefinite" calcMode="spline" keyTimes="0;0.06;0.34;0.44;0.56;0.78;1" keySplines="0 0 1 1;0.2 0 0.35 1;0.3 0 0.3 1;0 0 1 1;0.6 0 0.9 0.25;0 0 1 1" values="0.00 0;0.00 0;73.90 0;68.50 0;68.50 0;0.00 0;0.00 0" type="translate"/></path>
+    </g>
+  </g>
+</svg></div><figcaption>36 pt</figcaption></figure><figure><div class="slot"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 84 445 277"
+     width="45" height="28" role="img" aria-label="Loading">
+  <g transform="rotate(-4 222.5 222.5)">
+    <rect x="171.00" y="147.50" width="103.00" height="150.00" fill="#FF2E7E"><animate attributeName="x" dur="1.75s" repeatCount="indefinite" calcMode="spline" keyTimes="0;0.06;0.34;0.44;0.56;0.78;1" keySplines="0 0 1 1;0.2 0 0.35 1;0.3 0 0.3 1;0 0 1 1;0.6 0 0.9 0.25;0 0 1 1" values="171.00;171.00;97.10;102.50;102.50;171.00;171.00"/><animate attributeName="width" dur="1.75s" repeatCount="indefinite" calcMode="spline" keyTimes="0;0.06;0.34;0.44;0.56;0.78;1" keySplines="0 0 1 1;0.2 0 0.35 1;0.3 0 0.3 1;0 0 1 1;0.6 0 0.9 0.25;0 0 1 1" values="103.00;103.00;250.80;240.00;240.00;103.00;103.00"/></rect><path d="M211.60 147.50 H274.00 V297.50 H227.22 Z" fill="#17C8FF"><animate attributeName="d" dur="1.75s" repeatCount="indefinite" calcMode="spline" keyTimes="0;0.06;0.34;0.44;0.56;0.78;1" keySplines="0 0 1 1;0.2 0 0.35 1;0.3 0 0.3 1;0 0 1 1;0.6 0 0.9 0.25;0 0 1 1" values="M211.60 147.50 H274.00 V297.50 H227.22 Z;M211.60 147.50 H274.00 V297.50 H227.22 Z;M195.95 147.50 H347.90 V297.50 H234.00 Z;M197.09 147.50 H342.50 V297.50 H233.51 Z;M197.09 147.50 H342.50 V297.50 H233.51 Z;M211.60 147.50 H274.00 V297.50 H227.22 Z;M211.60 147.50 H274.00 V297.50 H227.22 Z"/></path>
+    <g fill="#FFF4E8">
+      <path d="M82.00 104.50 L201.00 104.50 L201.00 150.50 L128.00 150.50 L128.00 294.50 L201.00 294.50 L201.00 340.50 L82.00 340.50Z" transform="translate(-0.00 0)"
+        ><animateTransform attributeName="transform" dur="1.75s" repeatCount="indefinite" calcMode="spline" keyTimes="0;0.06;0.34;0.44;0.56;0.78;1" keySplines="0 0 1 1;0.2 0 0.35 1;0.3 0 0.3 1;0 0 1 1;0.6 0 0.9 0.25;0 0 1 1" values="-0.00 0;-0.00 0;-73.90 0;-68.50 0;-68.50 0;-0.00 0;-0.00 0" type="translate"/></path>
+      <path d="M363.00 104.50 L244.00 104.50 L244.00 150.50 L317.00 150.50 L317.00 294.50 L244.00 294.50 L244.00 340.50 L363.00 340.50Z" transform="translate(0.00 0)"
+        ><animateTransform attributeName="transform" dur="1.75s" repeatCount="indefinite" calcMode="spline" keyTimes="0;0.06;0.34;0.44;0.56;0.78;1" keySplines="0 0 1 1;0.2 0 0.35 1;0.3 0 0.3 1;0 0 1 1;0.6 0 0.9 0.25;0 0 1 1" values="0.00 0;0.00 0;73.90 0;68.50 0;68.50 0;0.00 0;0.00 0" type="translate"/></path>
+    </g>
+  </g>
+</svg></div><figcaption>28 pt</figcaption></figure><figure><div class="slot"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 84 445 277"
+     width="35" height="22" role="img" aria-label="Loading">
+  <g transform="rotate(-4 222.5 222.5)">
+    <rect x="171.00" y="147.50" width="103.00" height="150.00" fill="#FF2E7E"><animate attributeName="x" dur="1.75s" repeatCount="indefinite" calcMode="spline" keyTimes="0;0.06;0.34;0.44;0.56;0.78;1" keySplines="0 0 1 1;0.2 0 0.35 1;0.3 0 0.3 1;0 0 1 1;0.6 0 0.9 0.25;0 0 1 1" values="171.00;171.00;97.10;102.50;102.50;171.00;171.00"/><animate attributeName="width" dur="1.75s" repeatCount="indefinite" calcMode="spline" keyTimes="0;0.06;0.34;0.44;0.56;0.78;1" keySplines="0 0 1 1;0.2 0 0.35 1;0.3 0 0.3 1;0 0 1 1;0.6 0 0.9 0.25;0 0 1 1" values="103.00;103.00;250.80;240.00;240.00;103.00;103.00"/></rect><path d="M211.60 147.50 H274.00 V297.50 H227.22 Z" fill="#17C8FF"><animate attributeName="d" dur="1.75s" repeatCount="indefinite" calcMode="spline" keyTimes="0;0.06;0.34;0.44;0.56;0.78;1" keySplines="0 0 1 1;0.2 0 0.35 1;0.3 0 0.3 1;0 0 1 1;0.6 0 0.9 0.25;0 0 1 1" values="M211.60 147.50 H274.00 V297.50 H227.22 Z;M211.60 147.50 H274.00 V297.50 H227.22 Z;M195.95 147.50 H347.90 V297.50 H234.00 Z;M197.09 147.50 H342.50 V297.50 H233.51 Z;M197.09 147.50 H342.50 V297.50 H233.51 Z;M211.60 147.50 H274.00 V297.50 H227.22 Z;M211.60 147.50 H274.00 V297.50 H227.22 Z"/></path>
+    <g fill="#FFF4E8">
+      <path d="M82.00 104.50 L201.00 104.50 L201.00 150.50 L128.00 150.50 L128.00 294.50 L201.00 294.50 L201.00 340.50 L82.00 340.50Z" transform="translate(-0.00 0)"
+        ><animateTransform attributeName="transform" dur="1.75s" repeatCount="indefinite" calcMode="spline" keyTimes="0;0.06;0.34;0.44;0.56;0.78;1" keySplines="0 0 1 1;0.2 0 0.35 1;0.3 0 0.3 1;0 0 1 1;0.6 0 0.9 0.25;0 0 1 1" values="-0.00 0;-0.00 0;-73.90 0;-68.50 0;-68.50 0;-0.00 0;-0.00 0" type="translate"/></path>
+      <path d="M363.00 104.50 L244.00 104.50 L244.00 150.50 L317.00 150.50 L317.00 294.50 L244.00 294.50 L244.00 340.50 L363.00 340.50Z" transform="translate(0.00 0)"
+        ><animateTransform attributeName="transform" dur="1.75s" repeatCount="indefinite" calcMode="spline" keyTimes="0;0.06;0.34;0.44;0.56;0.78;1" keySplines="0 0 1 1;0.2 0 0.35 1;0.3 0 0.3 1;0 0 1 1;0.6 0 0.9 0.25;0 0 1 1" values="0.00 0;0.00 0;73.90 0;68.50 0;68.50 0;0.00 0;0.00 0" type="translate"/></path>
+    </g>
+  </g>
+</svg></div><figcaption>22 pt</figcaption></figure><figure><div class="slot"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 84 445 277"
+     width="27" height="17" role="img" aria-label="Loading">
+  <g transform="rotate(-4 222.5 222.5)">
+    <rect x="171.00" y="147.50" width="103.00" height="150.00" fill="#FF2E7E"><animate attributeName="x" dur="1.75s" repeatCount="indefinite" calcMode="spline" keyTimes="0;0.06;0.34;0.44;0.56;0.78;1" keySplines="0 0 1 1;0.2 0 0.35 1;0.3 0 0.3 1;0 0 1 1;0.6 0 0.9 0.25;0 0 1 1" values="171.00;171.00;97.10;102.50;102.50;171.00;171.00"/><animate attributeName="width" dur="1.75s" repeatCount="indefinite" calcMode="spline" keyTimes="0;0.06;0.34;0.44;0.56;0.78;1" keySplines="0 0 1 1;0.2 0 0.35 1;0.3 0 0.3 1;0 0 1 1;0.6 0 0.9 0.25;0 0 1 1" values="103.00;103.00;250.80;240.00;240.00;103.00;103.00"/></rect><path d="M211.60 147.50 H274.00 V297.50 H227.22 Z" fill="#17C8FF"><animate attributeName="d" dur="1.75s" repeatCount="indefinite" calcMode="spline" keyTimes="0;0.06;0.34;0.44;0.56;0.78;1" keySplines="0 0 1 1;0.2 0 0.35 1;0.3 0 0.3 1;0 0 1 1;0.6 0 0.9 0.25;0 0 1 1" values="M211.60 147.50 H274.00 V297.50 H227.22 Z;M211.60 147.50 H274.00 V297.50 H227.22 Z;M195.95 147.50 H347.90 V297.50 H234.00 Z;M197.09 147.50 H342.50 V297.50 H233.51 Z;M197.09 147.50 H342.50 V297.50 H233.51 Z;M211.60 147.50 H274.00 V297.50 H227.22 Z;M211.60 147.50 H274.00 V297.50 H227.22 Z"/></path>
+    <g fill="#FFF4E8">
+      <path d="M82.00 104.50 L201.00 104.50 L201.00 150.50 L128.00 150.50 L128.00 294.50 L201.00 294.50 L201.00 340.50 L82.00 340.50Z" transform="translate(-0.00 0)"
+        ><animateTransform attributeName="transform" dur="1.75s" repeatCount="indefinite" calcMode="spline" keyTimes="0;0.06;0.34;0.44;0.56;0.78;1" keySplines="0 0 1 1;0.2 0 0.35 1;0.3 0 0.3 1;0 0 1 1;0.6 0 0.9 0.25;0 0 1 1" values="-0.00 0;-0.00 0;-73.90 0;-68.50 0;-68.50 0;-0.00 0;-0.00 0" type="translate"/></path>
+      <path d="M363.00 104.50 L244.00 104.50 L244.00 150.50 L317.00 150.50 L317.00 294.50 L244.00 294.50 L244.00 340.50 L363.00 340.50Z" transform="translate(0.00 0)"
+        ><animateTransform attributeName="transform" dur="1.75s" repeatCount="indefinite" calcMode="spline" keyTimes="0;0.06;0.34;0.44;0.56;0.78;1" keySplines="0 0 1 1;0.2 0 0.35 1;0.3 0 0.3 1;0 0 1 1;0.6 0 0.9 0.25;0 0 1 1" values="0.00 0;0.00 0;73.90 0;68.50 0;68.50 0;0.00 0;0.00 0" type="translate"/></path>
+    </g>
+  </g>
+</svg></div><figcaption>17 pt</figcaption></figure><figure><div class="slot"><svg xmlns="http://www.w3.org/2000/svg" viewBox="14 81 450 316"
+     width="20" height="14" role="img" aria-label="Loading">
+  <g transform="rotate(0 239.0 239.0)">
+    <rect x="199.50" y="150.00" width="79.00" height="178.00" fill="#FF2E7E"><animate attributeName="x" dur="1.75s" repeatCount="indefinite" calcMode="spline" keyTimes="0;0.06;0.34;0.44;0.56;0.78;1" keySplines="0 0 1 1;0.2 0 0.35 1;0.3 0 0.3 1;0 0 1 1;0.6 0 0.9 0.25;0 0 1 1" values="199.50;199.50;144.95;149.00;149.00;199.50;199.50"/><animate attributeName="width" dur="1.75s" repeatCount="indefinite" calcMode="spline" keyTimes="0;0.06;0.34;0.44;0.56;0.78;1" keySplines="0 0 1 1;0.2 0 0.35 1;0.3 0 0.3 1;0 0 1 1;0.6 0 0.9 0.25;0 0 1 1" values="79.00;79.00;188.10;180.00;180.00;79.00;79.00"/></rect>
+    <g fill="#FFF4E8">
+      <path d="M70.50 87.00 L207.50 87.00 L207.50 153.00 L136.50 153.00 L136.50 325.00 L207.50 325.00 L207.50 391.00 L70.50 391.00Z" transform="translate(-0.00 0)"
+        ><animateTransform attributeName="transform" dur="1.75s" repeatCount="indefinite" calcMode="spline" keyTimes="0;0.06;0.34;0.44;0.56;0.78;1" keySplines="0 0 1 1;0.2 0 0.35 1;0.3 0 0.3 1;0 0 1 1;0.6 0 0.9 0.25;0 0 1 1" values="-0.00 0;-0.00 0;-54.55 0;-50.50 0;-50.50 0;-0.00 0;-0.00 0" type="translate"/></path>
+      <path d="M407.50 87.00 L270.50 87.00 L270.50 153.00 L341.50 153.00 L341.50 325.00 L270.50 325.00 L270.50 391.00 L407.50 391.00Z" transform="translate(0.00 0)"
+        ><animateTransform attributeName="transform" dur="1.75s" repeatCount="indefinite" calcMode="spline" keyTimes="0;0.06;0.34;0.44;0.56;0.78;1" keySplines="0 0 1 1;0.2 0 0.35 1;0.3 0 0.3 1;0 0 1 1;0.6 0 0.9 0.25;0 0 1 1" values="0.00 0;0.00 0;54.55 0;50.50 0;50.50 0;0.00 0;0.00 0" type="translate"/></path>
+    </g>
+  </g>
+</svg></div><figcaption>14 pt</figcaption></figure><figure><div class="slot"><svg xmlns="http://www.w3.org/2000/svg" viewBox="14 81 450 316"
+     width="16" height="11" role="img" aria-label="Loading">
+  <g transform="rotate(0 239.0 239.0)">
+    <rect x="199.50" y="150.00" width="79.00" height="178.00" fill="#FF2E7E"><animate attributeName="x" dur="1.75s" repeatCount="indefinite" calcMode="spline" keyTimes="0;0.06;0.34;0.44;0.56;0.78;1" keySplines="0 0 1 1;0.2 0 0.35 1;0.3 0 0.3 1;0 0 1 1;0.6 0 0.9 0.25;0 0 1 1" values="199.50;199.50;144.95;149.00;149.00;199.50;199.50"/><animate attributeName="width" dur="1.75s" repeatCount="indefinite" calcMode="spline" keyTimes="0;0.06;0.34;0.44;0.56;0.78;1" keySplines="0 0 1 1;0.2 0 0.35 1;0.3 0 0.3 1;0 0 1 1;0.6 0 0.9 0.25;0 0 1 1" values="79.00;79.00;188.10;180.00;180.00;79.00;79.00"/></rect>
+    <g fill="#FFF4E8">
+      <path d="M70.50 87.00 L207.50 87.00 L207.50 153.00 L136.50 153.00 L136.50 325.00 L207.50 325.00 L207.50 391.00 L70.50 391.00Z" transform="translate(-0.00 0)"
+        ><animateTransform attributeName="transform" dur="1.75s" repeatCount="indefinite" calcMode="spline" keyTimes="0;0.06;0.34;0.44;0.56;0.78;1" keySplines="0 0 1 1;0.2 0 0.35 1;0.3 0 0.3 1;0 0 1 1;0.6 0 0.9 0.25;0 0 1 1" values="-0.00 0;-0.00 0;-54.55 0;-50.50 0;-50.50 0;-0.00 0;-0.00 0" type="translate"/></path>
+      <path d="M407.50 87.00 L270.50 87.00 L270.50 153.00 L341.50 153.00 L341.50 325.00 L270.50 325.00 L270.50 391.00 L407.50 391.00Z" transform="translate(0.00 0)"
+        ><animateTransform attributeName="transform" dur="1.75s" repeatCount="indefinite" calcMode="spline" keyTimes="0;0.06;0.34;0.44;0.56;0.78;1" keySplines="0 0 1 1;0.2 0 0.35 1;0.3 0 0.3 1;0 0 1 1;0.6 0 0.9 0.25;0 0 1 1" values="0.00 0;0.00 0;54.55 0;50.50 0;50.50 0;0.00 0;0.00 0" type="translate"/></path>
+    </g>
+  </g>
+</svg></div><figcaption>11 pt</figcaption></figure><figure><div class="slot"><svg xmlns="http://www.w3.org/2000/svg" viewBox="14 81 450 316"
+     width="13" height="9" role="img" aria-label="Loading">
+  <g transform="rotate(0 239.0 239.0)">
+    <rect x="199.50" y="150.00" width="79.00" height="178.00" fill="#FF2E7E"><animate attributeName="x" dur="1.75s" repeatCount="indefinite" calcMode="spline" keyTimes="0;0.06;0.34;0.44;0.56;0.78;1" keySplines="0 0 1 1;0.2 0 0.35 1;0.3 0 0.3 1;0 0 1 1;0.6 0 0.9 0.25;0 0 1 1" values="199.50;199.50;144.95;149.00;149.00;199.50;199.50"/><animate attributeName="width" dur="1.75s" repeatCount="indefinite" calcMode="spline" keyTimes="0;0.06;0.34;0.44;0.56;0.78;1" keySplines="0 0 1 1;0.2 0 0.35 1;0.3 0 0.3 1;0 0 1 1;0.6 0 0.9 0.25;0 0 1 1" values="79.00;79.00;188.10;180.00;180.00;79.00;79.00"/></rect>
+    <g fill="#FFF4E8">
+      <path d="M70.50 87.00 L207.50 87.00 L207.50 153.00 L136.50 153.00 L136.50 325.00 L207.50 325.00 L207.50 391.00 L70.50 391.00Z" transform="translate(-0.00 0)"
+        ><animateTransform attributeName="transform" dur="1.75s" repeatCount="indefinite" calcMode="spline" keyTimes="0;0.06;0.34;0.44;0.56;0.78;1" keySplines="0 0 1 1;0.2 0 0.35 1;0.3 0 0.3 1;0 0 1 1;0.6 0 0.9 0.25;0 0 1 1" values="-0.00 0;-0.00 0;-54.55 0;-50.50 0;-50.50 0;-0.00 0;-0.00 0" type="translate"/></path>
+      <path d="M407.50 87.00 L270.50 87.00 L270.50 153.00 L341.50 153.00 L341.50 325.00 L270.50 325.00 L270.50 391.00 L407.50 391.00Z" transform="translate(0.00 0)"
+        ><animateTransform attributeName="transform" dur="1.75s" repeatCount="indefinite" calcMode="spline" keyTimes="0;0.06;0.34;0.44;0.56;0.78;1" keySplines="0 0 1 1;0.2 0 0.35 1;0.3 0 0.3 1;0 0 1 1;0.6 0 0.9 0.25;0 0 1 1" values="0.00 0;0.00 0;54.55 0;50.50 0;50.50 0;0.00 0;0.00 0" type="translate"/></path>
+    </g>
+  </g>
+</svg></div><figcaption>9 pt</figcaption></figure></div></section>
+<section><h2>The floor &mdash; under 9pt</h2><p class="note">Three pixels cannot hold five features, so the mark stands down and the square crossfades between the two hues. Shown at true size &mdash; and again at 8&times;, which is the only way to see what it is doing.</p><div class="row"><figure><div class="slot"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 10 10"
+     width="8" height="8" role="img" aria-label="Loading">
+  <rect width="10" height="10" fill="#FF2E7E"><animate attributeName="fill" dur="1.75s" repeatCount="indefinite" calcMode="spline" keyTimes="0;0.5;1" keySplines="0.4 0 0.4 1;0.4 0 0.4 1" values="#FF2E7E;#17C8FF;#FF2E7E"/></rect>
+</svg></div><figcaption>8 pt</figcaption></figure><figure><div class="slot"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 10 10"
+     width="6" height="6" role="img" aria-label="Loading">
+  <rect width="10" height="10" fill="#FF2E7E"><animate attributeName="fill" dur="1.75s" repeatCount="indefinite" calcMode="spline" keyTimes="0;0.5;1" keySplines="0.4 0 0.4 1;0.4 0 0.4 1" values="#FF2E7E;#17C8FF;#FF2E7E"/></rect>
+</svg></div><figcaption>6 pt</figcaption></figure><figure><div class="slot"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 10 10"
+     width="5" height="5" role="img" aria-label="Loading">
+  <rect width="10" height="10" fill="#FF2E7E"><animate attributeName="fill" dur="1.75s" repeatCount="indefinite" calcMode="spline" keyTimes="0;0.5;1" keySplines="0.4 0 0.4 1;0.4 0 0.4 1" values="#FF2E7E;#17C8FF;#FF2E7E"/></rect>
+</svg></div><figcaption>5 pt</figcaption></figure></div></section>
+<div class="zoomrow"><figure><div class="slot" style="transform:scale(8);transform-origin:center"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 10 10"
+     width="8" height="8" role="img" aria-label="Loading">
+  <rect width="10" height="10" fill="#FF2E7E"><animate attributeName="fill" dur="1.75s" repeatCount="indefinite" calcMode="spline" keyTimes="0;0.5;1" keySplines="0.4 0 0.4 1;0.4 0 0.4 1" values="#FF2E7E;#17C8FF;#FF2E7E"/></rect>
+</svg></div><figcaption>8 pt at 8&times;</figcaption></figure><figure><div class="slot" style="transform:scale(8);transform-origin:center"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 10 10"
+     width="6" height="6" role="img" aria-label="Loading">
+  <rect width="10" height="10" fill="#FF2E7E"><animate attributeName="fill" dur="1.75s" repeatCount="indefinite" calcMode="spline" keyTimes="0;0.5;1" keySplines="0.4 0 0.4 1;0.4 0 0.4 1" values="#FF2E7E;#17C8FF;#FF2E7E"/></rect>
+</svg></div><figcaption>6 pt at 8&times;</figcaption></figure><figure><div class="slot" style="transform:scale(8);transform-origin:center"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 10 10"
+     width="5" height="5" role="img" aria-label="Loading">
+  <rect width="10" height="10" fill="#FF2E7E"><animate attributeName="fill" dur="1.75s" repeatCount="indefinite" calcMode="spline" keyTimes="0;0.5;1" keySplines="0.4 0 0.4 1;0.4 0 0.4 1" values="#FF2E7E;#17C8FF;#FF2E7E"/></rect>
+</svg></div><figcaption>5 pt at 8&times;</figcaption></figure></div>
+
+<script>
+const svgs = () => [...document.querySelectorAll('svg')];
+document.getElementById('bg').addEventListener('click', e => {
+  const b = e.target.closest('button'); if (!b) return;
+  [...e.currentTarget.children].forEach(c => c.classList.toggle('on', c === b));
+  document.body.style.background = b.dataset.bg;
+  document.body.classList.toggle('light', ['#ffffff', '#FFF4E8'].includes(b.dataset.bg));
+});
+document.getElementById('sp').addEventListener('click', e => {
+  const b = e.target.closest('button'); if (!b) return;
+  [...e.currentTarget.children].forEach(c => c.classList.toggle('on', c === b));
+  const mul = parseFloat(b.dataset.mul);
+  document.querySelectorAll('animate, animateTransform').forEach(a => {
+    const base = a.dataset.dur || (a.dataset.dur = a.getAttribute('dur'));
+    a.setAttribute('dur', (parseFloat(base) / mul).toFixed(3) + 's');
+  });
+  svgs().forEach(s => s.setCurrentTime(0));
+});
+let playing = true;
+document.getElementById('pp').onclick = e => {
+  playing = !playing;
+  e.target.textContent = playing ? 'pause' : 'play';
+  svgs().forEach(s => playing ? s.unpauseAnimations() : s.pauseAnimations());
+};
+</script>
+</body></html>

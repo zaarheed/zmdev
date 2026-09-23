@@ -1,0 +1,5 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512" width="512" height="512" role="img" aria-label="Finger Frame"><rect width="512" height="512" fill="#07090C"/>
+  <g transform="rotate(-4.0 256 256)">
+    <rect x="111.0" y="198.0" width="290.0" height="116.0" fill="#FF2E7E"/><path d="M225.3 198.0 H401.0 V314.0 H269.3 Z" fill="#17C8FF"/>
+    <path d="M156.0 187.0H70.0V325.0H156.0 M356.0 187.0H442.0V325.0H356.0" fill="none" stroke="#FFF4E8" stroke-width="30.0" stroke-linecap="butt" stroke-linejoin="miter"/>
+  </g></svg>

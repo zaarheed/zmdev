@@ -14,7 +14,7 @@ export default [
 		},
 		{
 			label: "Contact",
-			href: "/contact"
+			href: "/#contact"
 		}
 	],
 	[],

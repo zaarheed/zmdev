@@ -11,35 +11,157 @@
   src: url(/fonts/ibm-plex-sans-var.woff2) format('woff2');
 }
 
-.test-mask  {
-  width: 300px;
-  height: 100px;
-  mask-size: cover;
-  -webkit-mask-image:url(/assets/phone_bottom.svg);
-
-  mask-image:url(/assets/phone_bottom.svg);
-  overflow: hidden;
+/* Hero orbits (components/home/hero/orbit.js). The orbits are sized from
+   the text they circle, so nothing shows until the script has placed every
+   logo; from then on each logo's opacity is set inline, frame by frame. */
+.orbit-item {
+  opacity: 0;
 }
 
-.scrollbar-hidden {
-  scrollbar-width: none;
-  -ms-overflow-style: none;
+.orbit.is-live .orbit-item {
+  will-change: transform, opacity;
 }
 
-.scrollbar-hidden::-webkit-scrollbar {
-  display: none;
+.orbit-item {
+  filter: drop-shadow(0 6px 6px rgb(24 24 27 / 0.18));
 }
 
-#phone-bottom {
-  width: 100%;
-  height: 100%;
-
-  background-size: contain;
-  background-position: center;
-  background-repeat: no-repeat;
-
-  mask-image: url(/assets/phone_bottom.svg);
-  mask-size: 98% 98%;
-  mask-repeat: no-repeat;
-  mask-position: center;
+@media (prefers-color-scheme: dark) {
+  /* a faint light edge so dark logos, like the fist, don't vanish */
+  .orbit-item {
+    filter: drop-shadow(0 0 1px rgb(255 255 255 / 0.9)) drop-shadow(0 6px 8px rgb(0 0 0 / 0.55));
+  }
 }
+
+/* Hero intro (components/home/hero). The name rises in word by word. The
+   tagline waits, hidden, until the logos burst out from behind it (orbit.js
+   adds .is-revealed); then "Perpetual hustler" rises in under a gold sheen,
+   the name recoils from the blast, the joke lands after a beat, and the hand
+   waves. The "js" class comes from _document, so without JavaScript the
+   tagline simply shows, and a failsafe shows it anyway if the burst never
+   comes. */
+.hero-word,
+.hero-wave {
+  display: inline-block;
+}
+
+/* The joke is its own unbreakable chunk, so it can open up from nothing. */
+.tagline-aside {
+  display: inline-block;
+  white-space: nowrap;
+  vertical-align: bottom;
+}
+
+.hero-wave {
+  transform-origin: 70% 85%;
+}
+
+.tagline-premium {
+  --ink: #27272a;
+  --shine: #e3a008;
+}
+
+@media (prefers-color-scheme: dark) {
+  .tagline-premium {
+    --ink: #e4e4e7;
+    --shine: #facd51;
+  }
+}
+
+@media (prefers-reduced-motion: no-preference) {
+  .hero-word {
+    animation: hero-word-in 800ms cubic-bezier(0.16, 1, 0.3, 1) both;
+    animation-delay: calc(120ms + var(--w) * 110ms);
+  }
+
+  .js .tagline-premium,
+  .js .tagline-aside {
+    opacity: 0;
+  }
+
+  /* Collapsed until it lands, so "Perpetual hustler" starts centred on its
+     own and gets nudged aside by the punchline. */
+  .js .tagline-aside {
+    max-width: 0;
+    overflow: hidden;
+  }
+
+  .js .hero:not(.is-revealed) .tagline-premium {
+    animation: hero-failsafe 400ms 4.5s both;
+  }
+
+  .js .hero:not(.is-revealed) .tagline-aside {
+    animation: aside-failsafe 400ms 4.5s both;
+  }
+
+  .hero.is-revealed .hero-name {
+    animation: hero-recoil 460ms cubic-bezier(0.3, 0.7, 0.4, 1);
+  }
+
+  .hero.is-revealed .tagline-premium {
+    color: transparent;
+    background-image: linear-gradient(100deg, var(--ink) 0%, var(--ink) 42%, var(--shine) 50%, var(--ink) 58%, var(--ink) 100%);
+    background-size: 300% 100%;
+    background-position: 100% 0;
+    -webkit-background-clip: text;
+    background-clip: text;
+    animation:
+      tagline-rise 700ms cubic-bezier(0.16, 1, 0.3, 1) both,
+      tagline-shine 1500ms 120ms cubic-bezier(0.45, 0, 0.25, 1) both;
+  }
+
+  .hero.is-revealed .tagline-aside {
+    animation: aside-in 560ms cubic-bezier(0.2, 0.8, 0.2, 1) 1.9s both;
+  }
+
+  .hero.is-revealed .hero-wave {
+    animation: hero-wave 1.4s ease-in-out 2.5s;
+  }
+}
+
+@keyframes hero-word-in {
+  from { opacity: 0; transform: translateY(0.45em); filter: blur(12px); }
+  to { opacity: 1; transform: none; filter: blur(0); }
+}
+
+/* The failsafes have their own names on purpose: an animation that keeps
+   its name keeps its clock, so a shared name would time the reveal from page
+   load instead of from the burst. */
+@keyframes hero-failsafe {
+  from { opacity: 0; }
+  to { opacity: 1; }
+}
+
+@keyframes aside-failsafe {
+  from { opacity: 0; max-width: 0; }
+  to { opacity: 1; max-width: 16em; }
+}
+
+@keyframes aside-in {
+  from { opacity: 0; max-width: 0; }
+  to { opacity: 1; max-width: 16em; }
+}
+
+@keyframes hero-recoil {
+  0% { transform: scale(1); }
+  30% { transform: scale(0.982); }
+  65% { transform: scale(1.012); }
+  100% { transform: scale(1); }
+}
+
+@keyframes tagline-rise {
+  from { opacity: 0; transform: translateY(10px); filter: blur(8px); }
+  to { opacity: 1; transform: none; filter: blur(0); }
+}
+
+@keyframes tagline-shine {
+  from { background-position: 100% 0; }
+  to { background-position: 0% 0; }
+}
+
+@keyframes hero-wave {
+  0%, 62%, 100% { transform: rotate(0deg); }
+  10%, 30%, 50% { transform: rotate(14deg); }
+  20%, 40% { transform: rotate(-8deg); }
+}
+

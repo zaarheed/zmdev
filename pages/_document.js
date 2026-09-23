@@ -10,16 +10,9 @@ class MyDocument extends Document {
     return (
       <Html>
         <Head>
-          <meta name="description" content="Full-stack Web Engineer experienced in JavaScript, Angular, React, Vue.js and Node.js" />
           <link rel="icon" href="/favicon.ico" />
-          
-          <meta property="og:title" content="Zahid Mahmood" />
-          <meta property="og:description" content="Full-stack Web Engineer" />
-          <meta property="og:image" content="https://www.zmdev.com/assets/og_card.jpg" />
-          <meta property="og:url" content="https://www.zmdev.com" />
-          <meta name="twitter:card" content="summary_large_image" />
-          <meta property="og:site_name" content="Zahid Mahmood" />
-          <meta name="twitter:image:alt" content="Full-stack Web Engineer" />
+          {/* Lets the CSS hold the hero tagline back until its intro reveals it. */}
+          <script dangerouslySetInnerHTML={{ __html: "document.documentElement.classList.add('js')" }} />
         </Head>
         <body>
           <Main />
