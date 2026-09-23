@@ -94,7 +94,7 @@ export default function ProjectsAsThumbs({ projects = [] }) {
 	// phones, which let it shift sideways. It is clip, not hidden, because hidden
 	// would stop the toggle from sticking.
 	return (
-		<section id="projects" className="w-full py-20 overflow-x-clip dark:bg-zinc-900">
+		<section id="projects" className="w-full py-20 overflow-x-clip bg-white dark:bg-zinc-900">
 			<div className="w-full max-w-4xl mx-auto px-4">
 				<div className="sticky top-3 z-20 flex justify-center pointer-events-none">
 					<div className="pointer-events-auto">

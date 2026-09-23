@@ -24,15 +24,29 @@ export default function ContactCard() {
 					<p className="text-gray-700 mb-2 dark:text-zinc-200">
                         Serial founder &amp; builder
 					</p>
-					<a
-						className="text-zinc-500 dark:text-zinc-300 flex flex-row space-x-2 items-center hover:text-azure-500"
-						href="https://www.twitter.com/zaarheed"
-						target="_blank"
-						rel="noreferrer"
-					>
-						<img src="/assets/twitter-official.svg" className="h-5" alt="" />
-						<span>@zaarheed</span>
-					</a>
+					<div className="flex flex-col gap-1.5">
+						<a
+							className="text-zinc-500 dark:text-zinc-300 flex flex-row space-x-2 items-center hover:text-azure-500"
+							href="https://www.twitter.com/zaarheed"
+							target="_blank"
+							rel="noreferrer"
+						>
+							<img src="/assets/twitter-official.svg" className="h-5 w-5" alt="" />
+							<span>@zaarheed</span>
+						</a>
+						<a
+							className="text-zinc-500 dark:text-zinc-300 flex flex-row space-x-2 items-center hover:text-azure-500"
+							href="https://www.linkedin.com/in/zaarheed"
+							target="_blank"
+							rel="noreferrer"
+						>
+							{/* A solid square reads heavier than the bird, so it sits a little smaller. */}
+							<span className="h-5 w-5 flex items-center justify-center">
+								<img src="/assets/linkedin-icon.svg" className="h-4 w-4 rounded-[3px]" alt="" />
+							</span>
+							<span>in/zaarheed</span>
+						</a>
+					</div>
 				</div>
 				<a 
 					href="mailto:zahid@zmdev.com"

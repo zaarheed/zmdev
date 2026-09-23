@@ -23,7 +23,7 @@ export default function Hero({ projects = [] }) {
 		<section
 			className={classNames(
 				"hero relative w-full min-h-[88svh] flex items-center justify-center overflow-hidden px-6 py-24",
-				"bg-gradient-to-b text-zinc-700 dark:text-zinc-200 from-azure-100 dark:from-zinc-900 dark:to-zinc-900",
+				"bg-gradient-to-b text-zinc-700 dark:text-zinc-200 from-azure-100 to-white dark:from-zinc-900 dark:to-zinc-900",
 				revealed && "is-revealed"
 			)}
 		>

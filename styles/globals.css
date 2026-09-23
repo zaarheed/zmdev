@@ -3,6 +3,22 @@
 @tailwind utilities;
 @import url("./name-animation.css");
 
+/* Safari colours its top and bottom bars from the page's own background, so
+   the page carries the colour at its edges: the hero's blue at the top (the
+   footer ends in the same blue), zinc in dark mode. Sections that want white
+   set it themselves. */
+html,
+body {
+  background-color: #cce5ff;
+}
+
+@media (prefers-color-scheme: dark) {
+  html,
+  body {
+    background-color: #18181b;
+  }
+}
+
 @font-face {
   font-family: 'IBM Plex Sans';
   font-style: normal;

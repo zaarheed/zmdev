@@ -11,6 +11,10 @@ class MyDocument extends Document {
       <Html>
         <Head>
           <link rel="icon" href="/favicon.ico" />
+          {/* Browser bars match the page edges; see html/body in globals.css. */}
+          <meta name="color-scheme" content="light dark" />
+          <meta name="theme-color" media="(prefers-color-scheme: light)" content="#cce5ff" />
+          <meta name="theme-color" media="(prefers-color-scheme: dark)" content="#18181b" />
           {/* Lets the CSS hold the hero tagline back until its intro reveals it. */}
           <script dangerouslySetInnerHTML={{ __html: "document.documentElement.classList.add('js')" }} />
         </Head>

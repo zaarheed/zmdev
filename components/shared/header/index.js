@@ -24,7 +24,6 @@ export default function Header() {
 			<div className="w-full max-w-4xl mx-auto flex flex-row items-center justify-between">
 				<div className="flex flex-row space-x-3">
 					<NavItem label="Home" href="/" />
-					<NavItem label="About" href="/about" />
 					<NavItem label="Projects" href="/projects" />
 					<NavItem label="Network" href="/network" />
 				</div>
